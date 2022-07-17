@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+:root {
+	--corFundo: #F0F0F0;
+	--corAzul: #79B7DB;
+	--corCinza: #aaa;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 25% auto;
+	column-gap: 20px;
+	background-color: #333;
+}
+
+nav	{
+	background-color: var(--corFundo);
+}
+
+nav img {
+	display: block;
+	margin: auto;
+	border: 2px solid var(--corCinza);
+	width: 55%;
+}
+
+nav div.perfil {
+	padding: 30px;
+}
+
+section {
+	text-align: center;
+	padding-block: 15px;
+}
+
+section a{
+	display: block;
+	line-height: 3em;
+}
+
+section a:hover{
+	background-color: var(--corAzul);
+}
+
+footer .contato {
+	display: block;
+	--border: 1px dashed var(--corCinza);
+	border-top: var(--border);
+	border-bottom: var(--border);
+}
