@@ -194,6 +194,7 @@ main img {
 	margin: auto auto;
 	min-width: 200px;
 	max-width: 100%;
+	opacity: 0.6;
 }
 
 /* --------- Main: areas --------- */
@@ -216,7 +217,7 @@ main img {
 	background-color: var(--corVer);
 }
 
-/* --------- Midia  --------- */
+/* --------- Media queries  --------- */
 
 
 
