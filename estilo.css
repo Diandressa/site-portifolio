@@ -41,6 +41,7 @@ body{
 
 nav	{
 	background-color: var(--corFundo);
+	height: 100vh;
 }
 
 nav img {
@@ -52,14 +53,13 @@ nav img {
 }
 
 nav div.perfil {
-	padding: 30px;
+	padding-block: 3vw;
 }
 
 /* --------- Navegação: links --------- */
 
 section.links {
 	text-align: center;
-	padding-block: 15px;
 	font-family: 'Dosis Medium';
 	text-transform: uppercase;
 	font-size: 1.2em;
@@ -101,8 +101,8 @@ footer .contato {
 	border-top: var(--border);
 	border-bottom: var(--border);
 	line-height: 2em;
-	padding-block: 15%;
-	margin-block: 15%;
+	padding-block: 8%;
+	margin-block: 10%;
 }
 
 footer .contato p {
@@ -115,11 +115,11 @@ footer .contato i {
 }
 
 footer .redes{
-	margin-bottom: 8px;
 	text-align: center;
 }
 
 footer .redes i {
+	margin-top: 2%;
 	margin-right: 5px;
 	font-size: 1.2em;
 	color: var(--corCinzaEsc);
@@ -133,14 +133,16 @@ footer p.redes {
 	width: 100%;
 	text-align: center;
 	color: var(--corCinzaEsc);
+	margin-top: 5px;
 }
 
 /* --------- Main --------- */
 
 main {
+	height: 100vh;
 	display: grid;
 	grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
-	grid-template-rows: min-content 1fr 1fr 1fr;
+	grid-template-rows: minmax(25vh, 1fr) minmax(25vh, 1fr) minmax(25vh, 1fr) minmax(25vh, 1fr);
 	grid-template-areas: "box1 box2 box3 box4"
 						 "box5 box0 box0 box6"
 						 "box7 box0 box0 box8"
@@ -148,7 +150,6 @@ main {
 }
 
 main div {
-	border: 1px solid red;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -157,27 +158,64 @@ main div {
 	text-align: justify;
 }
 
-h1 {
+main h1 {
 	text-transform: uppercase;
+	animation: titulo 3s infinite alternate;
+}
+
+@keyframes titulo {
+	from{
+		transform: translateX(10px);
+	}
+	to{
+		transform: translateX(-10px);
+	}
 }
 
 main a {
-	border: 1px solid var(--corCinza);
-	display: block;
+	border: 1px solid var(--corCinzaEsc);
+	background-color: var(--corAzul);
+	align-self: center;
+	padding: 10px;
+
+	transition: .9s;
+}
+
+main a:link, main a:visited{
+	color: var(--corPreto);
+	font-family: 'Dosis Medium';
+}
+
+main a:hover{
+	transform: translateY(-8px);
 }
 
 main img {
 	display: block;
 	margin: auto auto;
+	min-width: 200px;
 	max-width: 100%;
 }
+
+/* --------- Main: areas --------- */
 
 .box0 {
 	grid-area: box0;
 	background: var(--corFundo);
-
+	padding: 25px;
 }
 
+.cinzaEsc {
+	background-color: var(--corCinzaEsc);
+}
+
+.azul {
+	background-color: var(--corAzul);
+}
+
+.vermelho {
+	background-color: var(--corVer);
+}
 
 
 
