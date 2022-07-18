@@ -173,7 +173,6 @@ main h1 {
 }
 
 main a {
-	border: 1px solid var(--corCinzaEsc);
 	background-color: var(--corAzul);
 	align-self: center;
 	padding: 10px;
@@ -217,7 +216,7 @@ main img {
 	background-color: var(--corVer);
 }
 
-
+/* --------- Midia  --------- */
 
 
 
