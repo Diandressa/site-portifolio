@@ -29,10 +29,8 @@
 }
 
 body{
-	width: 100vw;
-	height: 100vh;
 	display: grid;
-	grid-template-columns: 270px auto;
+	grid-template-columns: 260px auto;
 	background-color: #333;
 	font-family: 'Dosis';
 }
@@ -41,7 +39,6 @@ body{
 
 nav	{
 	background-color: var(--corFundo);
-	height: 100vh;
 }
 
 nav img {
@@ -92,9 +89,9 @@ section .ativo, .ativo:hover {
 	background-color: var(--corAzul);
 }
 
-/* --------- Navegação: footer --------- */
+/* --------- Navegação: article --------- */
 
-footer .contato {
+article .contato {
 	color: var(--corCinzaEsc);
 	display: block;
 	--border: 1px dashed var(--corCinza);
@@ -105,30 +102,30 @@ footer .contato {
 	margin-block: 10%;
 }
 
-footer .contato p {
+article .contato p {
 	width: 100%;
 }
 
-footer .contato i {
+article .contato i {
 	margin-left: 8%;
 	margin-right: 5%;
 }
 
-footer .redes{
+article .redes{
 	text-align: center;
 }
 
-footer .redes i {
+article .redes i {
 	margin-right: 5px;
 	font-size: 1.2em;
 	color: var(--corCinzaEsc);
 }
 
-footer .redes i:hover{
+article .redes i:hover{
 	color: var(--corAzul);
 }
 
-footer p.redes {
+article p.redes {
 	width: 100%;
 	text-align: center;
 	color: var(--corCinzaEsc);
@@ -140,8 +137,8 @@ footer p.redes {
 main {
 	height: 100vh;
 	display: grid;
-	grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
-	grid-template-rows: minmax(25vh, 1fr) minmax(25vh, 1fr) minmax(25vh, 1fr) minmax(25vh, 1fr);
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 	grid-template-areas: "box1 box2 box3 box4"
 						 "box5 box0 box0 box6"
 						 "box7 box0 box0 box8"
@@ -162,6 +159,7 @@ main h1 {
 	animation: titulo 3s infinite alternate;
 }
 
+/*
 @keyframes titulo {
 	from{
 		transform: translateX(10px);
@@ -170,6 +168,7 @@ main h1 {
 		transform: translateX(-10px);
 	}
 }
+*/
 
 main a {
 	background-color: var(--corAzul);
@@ -217,6 +216,88 @@ main img {
 }
 
 /* --------- Media queries  --------- */
+
+/*Medium devices*/
+@media (min-width: 855px) and (max-width: 1023px){
+	main {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 50vh 1fr;
+		grid-template-areas: "box1 box2 box3"
+							 "box0 box0 box0"
+							 "box4 box5 box6";
+	}
+
+	main div:nth-child(n + 8) {
+		display: none;
+	}
+
+	.medium{
+		display: block;
+		background-color: var(--corAzul);
+	}
+
+	body{
+		grid-template-columns: 250px auto;
+	}
+
+	.box0{
+		padding-inline: 70px;
+		padding-block: 50px;
+	}
+
+	main a {
+		text-align: center;
+		width: 150px;
+	}
+
+}
+
+/*small devices*/
+@media (max-width: 854px){
+	
+
+	main div:nth-child(n + 7), main div:nth-child(-n +5) {
+		display: none;
+	}
+
+	body{
+		grid-template-columns: 250px auto;
+	}
+
+	.box0{
+		padding-inline: 30px;
+		padding-block: 30px;
+	}
+
+	main a {
+		text-align: center;
+		width: 150px;
+	}
+
+}
+
+/* height */
+
+@media (min-height: 750px){
+	
+	article .contato{
+		margin-block: 15%;
+		padding-block: 20%;
+	}
+}
+
+@media (max-height: 619px){
+	article .contato{
+		margin-block: 5%;
+		padding-block: 3%;
+	}
+
+	main{
+		height: auto;
+		grid-template-rows: 30% 40% 30%;
+	}	
+}
 
 
 
