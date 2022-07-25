@@ -7,16 +7,27 @@ let tempo = 3000
 let n = 1
 let c = 0
 
-setInterval("carrossel(n)", tempo)
-function carrossel(n){
+const btnMobile = document.querySelector('#btn-mobile');
 
-	img[n].src = "./imgs/ex" + (Math.floor(Math.random()*(7+1 - 1)+1)) + ".jpg"	 
+function toggleMenu(){
+	const navSmall = document.querySelector('.nav-small-dev');
+	navSmall.classList.toggle('ativar')
 }
 
-setInterval("cor(c)", tempo)
+btnMobile.addEventListener('click', toggleMenu)
+
+
+function carrossel(n){
+
+	img[n].src = "./imgs/ex" + (Math.floor(Math.random()*(7)+1)) + ".jpg"
+		 
+}
+setInterval("carrossel(n)", tempo)
+
+
 function cor(c){
 	
-	console.log(c)
+	//console.log(c)
 	if (c == 0){
 		//azul[c].classList.replace('azul', 'vermelho')
 		azul[c].classList.toggle('azul')
@@ -34,19 +45,22 @@ function cor(c){
 	}
 	
 }
+setInterval("cor(c)", tempo)
 
-setInterval("soma()", tempo)
+
 function soma(){
 	c++
 	if (c >= 2){
 		c = 0
 	}
 }
+setInterval("soma()", tempo)
 
-setInterval("random()", tempo)
+
 function random(){
-	n = Math.floor(Math.random()*(7+1 - 1)+1)
+	n = Math.floor(Math.random()*(7)+1)
 }
+setInterval("random()", tempo)
 
-//console.log(Math.floor(Math.random()*(7+1 - 1)+1))
+//console.log(Math.floor(Math.random()*(7)+1))
 

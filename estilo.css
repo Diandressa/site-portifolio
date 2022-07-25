@@ -35,6 +35,10 @@ body{
 	font-family: 'Dosis';
 }
 
+div.nav-small-dev{
+	display: none;
+}
+
 /* --------- Navegação --------- */
 
 nav	{
@@ -170,7 +174,7 @@ main h1 {
 }
 */
 
-main a {
+main a.link {
 	background-color: var(--corAzul);
 	align-self: center;
 	padding: 10px;
@@ -246,7 +250,7 @@ main img {
 		padding-block: 50px;
 	}
 
-	main a {
+	main a.link {
 		text-align: center;
 		width: 150px;
 	}
@@ -262,19 +266,114 @@ main img {
 	}
 
 	body{
-		grid-template-columns: 250px auto;
+		grid-template-columns: none;
+		display: block;
+	}
+
+	main {
+		height: 85vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.box0{
-		padding-inline: 30px;
-		padding-block: 30px;
+		grid-area: none;
+		margin-top: -5%;
+		
 	}
 
-	main a {
+	nav{
+		display: none;
+	}
+
+	div.nav-small-dev{
+		display: flex;
+		min-width: 200px;
+		height: 80px;
+		background-color: var(--corFundo);
+		padding: 1rem;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	#btn-mobile{
+		display: none;
+	}
+
+	.menu{
+		display: flex;
+		gap: 20px;
+	}
+
+	main a.link {
 		text-align: center;
 		width: 150px;
+		margin-top: 6%;
 	}
 
+	.box0 h1{
+		margin-bottom: 5%;
+	}
+
+}
+
+/* mobile devices*/
+
+@media (max-width: 400px){
+	#btn-mobile{
+		display: flex;
+		padding: 10px 15px;
+		border: none;
+		font-size: 1.1em;
+		text-transform: uppercase;
+		background: none;
+		cursor: pointer;
+		color: var(--corPreto);
+	}
+
+	div.menu{
+		display: block;
+		
+		height: 0px;
+		visibility: hidden;
+		overflow-y: hidden;
+		transition: .6s;
+
+		width: 100%;
+		position: absolute;
+		top: 80px;
+		right: 0px;
+		background-color: var(--corFundo);
+		z-index: 1000;
+		font-weight: bold;
+	}
+
+	div.menu a:hover{
+		background-color: var(--corPreto);
+		color: white;
+	}
+
+	.menu a, a:visited{
+		display: block;
+		padding: 1rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+		margin-inline: 0.5rem;
+		color: var(--corPreto);
+	}
+
+	div.nav-small-dev{
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.nav-small-dev.ativar .menu{
+		display: block;
+		height: calc(100vh - 80px);
+		visibility: visible;
+		overflow-y: auto;
+	}
+	
 }
 
 /* height */
