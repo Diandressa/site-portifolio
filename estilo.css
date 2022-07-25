@@ -218,7 +218,7 @@ main img {
 /* --------- Media queries  --------- */
 
 /*Medium devices*/
-@media (min-width: 855px) and (max-width: 1023px){
+@media (min-width: 830px) and (max-width: 1023px){
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -254,7 +254,7 @@ main img {
 }
 
 /*small devices*/
-@media (max-width: 854px){
+@media (max-width: 829px){
 	
 
 	main div:nth-child(n + 7), main div:nth-child(-n +5) {
