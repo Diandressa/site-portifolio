@@ -499,7 +499,7 @@ main img {
 	}
 }
 
-@media (max-height: 619px){
+@media (max-height: 500px){
 	article .contato{
 		margin-block: 5%;
 		padding-block: 3%;
@@ -507,8 +507,12 @@ main img {
 
 	main{
 		height: auto;
-		grid-template-rows: 30% 40% 30%;
-	}	
+		grid-template-rows: 30% 40% 30%;*/
+	}
+	
+	.box0 h1{
+		margin-top: 8%;
+	}
 }
 
 
