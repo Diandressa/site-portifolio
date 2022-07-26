@@ -7,22 +7,25 @@ let tempo = 3000
 let n = 1
 let c = 0
 
-const btnMobile = document.querySelector('#btn-mobile');
+const btnMobile = document.querySelector('#hamburguer');
 
-function toggleMenu(){
+function toggleMenu(event){
+	if(event.type === 'touchstart'){
+		event.preventDefault()
+	}
 	const navSmall = document.querySelector('.nav-small-dev');
 	navSmall.classList.toggle('ativar')
 }
 
-btnMobile.addEventListener('click', toggleMenu)
-
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
 
 function carrossel(n){
 
 	img[n].src = "./imgs/ex" + (Math.floor(Math.random()*(7)+1)) + ".jpg"
 		 
 }
-setInterval("carrossel(n)", tempo)
+setInterval("carrossel(n)", tempo);
 
 
 function cor(c){
@@ -45,7 +48,7 @@ function cor(c){
 	}
 	
 }
-setInterval("cor(c)", tempo)
+setInterval("cor(c)", tempo);
 
 
 function soma(){
@@ -54,13 +57,13 @@ function soma(){
 		c = 0
 	}
 }
-setInterval("soma()", tempo)
+setInterval("soma()", tempo);
 
 
 function random(){
 	n = Math.floor(Math.random()*(7)+1)
 }
-setInterval("random()", tempo)
+setInterval("random()", tempo);
 
 //console.log(Math.floor(Math.random()*(7)+1))
 

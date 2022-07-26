@@ -274,10 +274,10 @@ main img {
 
 	@keyframes fundo {
 		from{
-			background-color: var(--corPreto);
+			background-color: var(--corAzul);
 		}
 		to{
-			background-color: var(--corCinzaEsc);
+			background-color: var(--corPreto);
 		}
 	}
 
@@ -376,8 +376,38 @@ main img {
 		font-size: 1em;
 		text-transform: uppercase;
 		background: none;
-		cursor: pointer;
 		color: white;
+	}
+
+	#hamburguer{
+		cursor: pointer;
+		display: block;
+		border-top: 2px solid var(--corFundo);
+		width: 20px;
+	}
+
+	#hamburguer::after, #hamburguer::before{
+		content: '';
+		display: block;
+		width: 20px;
+		height: 2px;
+		background-color: var(--corFundo);
+		margin-top: 5px;
+		transition: 0.3s;
+		position: relative;
+	}
+
+	.nav-small-dev.ativar #hamburguer{
+		border-top-color: transparent;
+	}
+
+	.nav-small-dev.ativar #hamburguer::before {
+		transform: rotate(135deg);
+	}
+
+	.nav-small-dev.ativar #hamburguer::after{
+		transform: rotate(-135deg);
+		top: -7px;
 	}
 
 	.box0{
