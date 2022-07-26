@@ -199,6 +199,10 @@ main img {
 	opacity: 0.6;
 }
 
+#image-mob{
+	display: none;
+}
+
 /* --------- Main: areas --------- */
 
 .box0 {
@@ -292,14 +296,25 @@ main img {
 		grid-area: none;
 		height: 80%;
 		width: 90vw;
+		padding-top: 4rem;
+		border: 5px solid var(--corVer);
+	}
 
-		border-left: 3em solid var(--corPreto);
-		border-top: 3em solid transparent;
-		border-bottom: 3em solid transparent;
+	.box0 h1{
+		margin-top: -5%;
+		margin-bottom: 10%;
+		animation: titulo 3s infinite alternate;
+	}
 
-		border-right: 3em solid var(--corPreto);
-		border-top: 3em solid transparent;
-		border-bottom: 3em solid transparent;
+	#image-mob{
+		display: block;
+		margin: 25px auto;
+		margin-bottom: -25px;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background: var(--corPreto) url('./imgs/perfil.jpg') no-repeat center center;
+		background-size: 100%;
 	}
 
 	nav{
@@ -314,17 +329,17 @@ main img {
 		padding: 1rem;
 		justify-content: center;
 		align-items: flex-end;
+		border-bottom: 1px solid var(--corFundo);
 	}
 
 	.nav-small-dev a, .nav-small-dev a:visited{
 		color: white;
-		padding: 8px;
+		padding: 10px;
 	}
 
 	.nav-small-dev a:hover{
 		transition: 0.3s;
 		background-color: var(--corPreto);
-		border-radius: 5px;
 	}
 
 	#btn-mobile{
@@ -342,13 +357,6 @@ main img {
 		margin-top: 10%;
 	}
 
-	.box0 h1{
-		margin-top: -5%;
-		margin-bottom: 10%;
-		animation: titulo 3s infinite alternate;
-	}
-
-
 	@keyframes titulo {
 		from{
 			transform: translateX(10px);
@@ -356,7 +364,7 @@ main img {
 		to{
 			transform: translateX(-10px);
 		}
-	}	
+	}
 
 }
 
@@ -413,6 +421,7 @@ main img {
 	.box0{
 		display: block;
 		border: none;
+		padding-top: 5%;
 	}
 
 	.box0 h1{
@@ -455,6 +464,7 @@ main img {
 		background-color: var(--corFundo);
 		z-index: 1000;
 		font-weight: bold;
+		font-size: 1.2em;
 	}
 
 	div.menu a:hover{
