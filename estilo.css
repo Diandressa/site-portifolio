@@ -523,8 +523,12 @@ main img {
 	.box0 h1{
 		margin-top: 8%;
 	}
-}
 
+	#image-mob{
+		margin: 30px auto;
+		margin-bottom: 30px;
+	}
+}
 
 
 
