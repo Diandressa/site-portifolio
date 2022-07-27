@@ -39,6 +39,11 @@ body{
 	grid-template-columns: 260px auto;
 }
 
+button#voltar{
+	position: sticky;
+	top: 0;
+}
+
 div.nav-small-dev{
 	display: none;
 }
