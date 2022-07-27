@@ -7,7 +7,15 @@ let tempo = 3000
 let n = 1
 let c = 0
 
+const voltar = document.querySelector('#voltar')
+
 const menuItems = document.querySelectorAll('.menu a');
+
+voltar.addEventListener('click', voltarTop)
+
+function voltarTop(){
+	window.scroll(0, 0)
+}
 
 menuItems.forEach(item => {
 	item.addEventListener('click', scrollToIdOnClick)
