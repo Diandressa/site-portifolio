@@ -15,46 +15,46 @@
 	<script src="https://kit.fontawesome.com/659098d514.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="nav-small-dev">
-		<span id="btn-mobile">menu</span>
-		<span id="hamburguer"></span>
-		<div class="menu">
-			<a href="#">Início</a>
-			<a href="#">Portifólio</a>
-			<a href="#">Currículo</a>
-			<a href="#">Contatos</a>
-		</div>
-	</div>
-	<nav>
-		<div class="perfil">
-			<img src="./imgs/perfil.jpg" alt="imagem do perfil">
-		</div>
-
-		<section class="links">
-			<a href="#" class="ativo"><div></div>Início</a>
-			<a href="#"><div></div>Portifólio</a><p style="background: #AC3737; font-size: 0.7em;">(em desenvolvimento)</p>
-			<a href="#"><div></div>Currículo</a><p style="background: #AC3737; font-size: 0.7em;">(em desenvolvimento)</p>
-		</section>
-
-		<article>
-			<div class="contato">
-				<p><i class="fa-regular fa-envelope"></i>andressa_nicolau@hotmail.com</p>
-				<p><i class="fa-solid fa-mobile-screen"></i>+55 (11) 996670801</p>
+	<div id="pag1-grid">
+		<div class="nav-small-dev">
+			<span id="btn-mobile">menu</span>
+			<span id="hamburguer"></span>
+			<div class="menu">
+				<a href="#">Início</a>
+				<a href="#port">Portifólio</a>
+				<a href="#">Currículo</a>
+				<a href="#">Contato</a>
 			</div>
-			<div class="redes">
-				<a href="https://www.instagram.com/andressa_nicolau/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-				<a href="https://www.linkedin.com/in/andressa-nicolau/" target="_blank"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a>
-				<a href="https://github.com/Diandressa" target="_blank"><i class="fa-brands fa-github"></i></a>
+		</div>
+		<nav>
+			<div class="perfil">
+				<img src="./imgs/perfil.jpg" alt="imagem do perfil">
 			</div>
-			
-			<p class="redes">Andressa Nicolau</p>
-			
-		</article>
-	</nav>
+			<section class="links menu">
+				<a href="#ini" class="ativo"><div></div>Início</a>
+				<a href="#port"><div></div>Portifólio</a><p style="background: #AC3737; font-size: 0.7em;">(em desenvolvimento)</p>
+				<a href="#cur"><div></div>Currículo</a><p style="background: #AC3737; font-size: 0.7em;">(em desenvolvimento)</p>
+			</section>
+			<article>
+				<div class="contato">
+					<p><i class="fa-regular fa-envelope"></i>andressa_nicolau@hotmail.com</p>
+					<p><i class="fa-solid fa-mobile-screen"></i>+55 (11) 996670801</p>
+				</div>
+				<div class="redes">
+					<a href="https://www.instagram.com/andressa_nicolau/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/in/andressa-nicolau/" target="_blank"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a>
+					<a href="https://github.com/Diandressa" target="_blank"><i class="fa-brands fa-github"></i></a>
+				</div>
+		
+				<p class="redes">Andressa Nicolau</p>
+		
+			</article>
+		</nav>
+	
 
 	<figure id="image-mob"></figure>
 	
-	<main>
+	<main id="inicio">
 		
 		<div>
 			<img src="./imgs/ex1.jpg" alt="portilio imagem 1">
@@ -90,6 +90,13 @@
 			<img src="./imgs/ex7.jpg" alt="portilio imagem 7">
 		</div>
 	</main>
+
+	</div>
+	
+	<main id="port">
+		<div id="port" style="width: 500px; height: 1024px; background: red;"></div>
+	</main>
+	
 	
 	<script type="text/javascript" src="./javascript.js"></script>
 </body>

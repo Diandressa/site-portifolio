@@ -7,6 +7,38 @@ let tempo = 3000
 let n = 1
 let c = 0
 
+const menuItems = document.querySelectorAll('.menu a');
+
+menuItems.forEach(item => {
+	item.addEventListener('click', scrollToIdOnClick)
+})
+
+function scrollToIdOnClick(event){
+	event.preventDefault();
+
+	const element = event.target;
+	//event.target qual target exatamente foi clicado do evento
+
+	//getAtrribute pegar o valor do href
+	const id = element.getAttribute('href');
+
+	//passar o id para uma variável
+	const to = document.querySelector(id).offsetTop;
+
+	//offsetTop - função que diz qual o topo daquele id
+
+	//window.scroll(x, y) - passar a coordenada do scroll
+	//window.scroll(0, to)
+
+	//passar a coordenada dentro do scroll como objeto
+	window.scroll({
+		top: to,
+		behavior: "smooth",
+		//comportamento suave
+	});
+}
+
+
 const btnMobile = document.querySelector('#hamburguer');
 
 function toggleMenu(event){

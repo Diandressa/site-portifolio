@@ -29,10 +29,14 @@
 }
 
 body{
-	display: grid;
-	grid-template-columns: 260px auto;
+	
 	background-color: #333;
 	font-family: 'Dosis';
+}
+
+#pag1-grid{
+	display: grid;
+	grid-template-columns: 260px auto;
 }
 
 div.nav-small-dev{
@@ -72,7 +76,7 @@ section.links a{
 	width: 100%;
 }
 
-section div{
+section.links div{
 	position: absolute;
 	left: 0;
 	display: inline-block;
@@ -136,9 +140,9 @@ article p.redes {
 	margin-top: 5px;
 }
 
-/* --------- Main --------- */
+/* --------- main#inicio --------- */
 
-main {
+main#inicio {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -149,7 +153,7 @@ main {
 						 "box9 box10 box11 box12";
 }
 
-main div {
+main#inicio div {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -158,7 +162,7 @@ main div {
 	text-align: justify;
 }
 
-main h1 {
+main#inicio h1 {
 	text-transform: uppercase;
 	animation: titulo 3s infinite alternate;
 }
@@ -174,7 +178,7 @@ main h1 {
 }
 */
 
-main a.link {
+main#inicio a.link {
 	background-color: var(--corAzul);
 	align-self: center;
 	padding: 10px;
@@ -182,16 +186,16 @@ main a.link {
 	transition: .9s;
 }
 
-main a:link, main a:visited{
+main#inicio a:link, main#inicio a:visited{
 	color: var(--corPreto);
 	font-family: 'Dosis Medium';
 }
 
-main a:hover{
+main#inicio a:hover{
 	transform: translateY(-8px);
 }
 
-main img {
+main#inicio img {
 	display: block;
 	margin: auto auto;
 	min-width: 200px;
@@ -203,7 +207,7 @@ main img {
 	display: none;
 }
 
-/* --------- Main: areas --------- */
+/* --------- main#inicio: areas --------- */
 
 .box0 {
 	grid-area: box0;
@@ -227,7 +231,7 @@ main img {
 
 /*Medium devices*/
 @media (min-width: 845px) and (max-width: 1023px){
-	main {
+	main#inicio {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 50vh 1fr;
@@ -236,7 +240,7 @@ main img {
 							 "box4 box5 box6";
 	}
 
-	main div:nth-child(n + 8) {
+	main#inicio div:nth-child(n + 8) {
 		display: none;
 	}
 
@@ -255,7 +259,7 @@ main img {
 		
 	}
 
-	main a.link {
+	main#inicio a.link {
 		text-align: center;
 		width: 150px;
 	}
@@ -266,14 +270,17 @@ main img {
 @media (max-width: 844px){
 	
 
-	main div:nth-child(n + 7), main div:nth-child(-n +5) {
+	main#inicio div:nth-child(n + 7), main#inicio div:nth-child(-n +5) {
 		display: none;
 	}
 
 	body{
-		grid-template-columns: none;
 		display: block;
 		animation: fundo 3s infinite alternate;
+	}
+
+	#pag1-grid{
+		grid-template-columns: none;
 	}
 
 	@keyframes fundo {
@@ -285,7 +292,7 @@ main img {
 		}
 	}
 
-	main {
+	main#inicio {
 		height: 85vh;
 		display: flex;
 		justify-content: center;
@@ -351,7 +358,7 @@ main img {
 		gap: 20px;
 	}
 
-	main a.link {
+	main#inicio a.link {
 		text-align: center;
 		width: 150px;
 		margin-top: 10%;
@@ -515,7 +522,7 @@ main img {
 		padding-block: 3%;
 	}
 
-	main{
+	main#inicio#inicio{
 		height: auto;
 		grid-template-rows: 30% 40% 30%;*/
 	}
